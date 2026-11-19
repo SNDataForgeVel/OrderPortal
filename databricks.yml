@@ -19,7 +19,7 @@ variables:
   schema:
     description: The schema to use
   ordervolumename:
-    description: Unity Catalog name
+    description: Volume name
 
 targets:
   dev:
@@ -27,7 +27,3 @@ targets:
     default: true
     workspace:
       host: https://dbc-8f0147e0-9999.cloud.databricks.com
-    variables:
-      catalog: workspace
-      schema: schema
-      ordervolumename: ordervolumename
