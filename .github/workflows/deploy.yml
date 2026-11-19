@@ -13,9 +13,9 @@ jobs:
     env:
       DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
       DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN  }}
-      BUNDLE_VAR_CATALOG: ${{ vars.BUNDLE_VAR_CATALOG }}
-      BUNDLE_VAR_SCHEMA: ${{ vars.BUNDLE_VAR_SCHEMA }}
-      BUNDLE_VAR_ORDERVOLUMENAME: ${{ vars.BUNDLE_VAR_ORDERVOLUMENAME }}
+      BUNDLE_VAR_CATALOG: ${{ vars.CATALOG }}
+      BUNDLE_VAR_SCHEMA: ${{ vars.SCHEMA }}
+      BUNDLE_VAR_ORDERVOLUMENAME: ${{ vars.ORDERVOLUMENAME }}
 
     steps:
       - uses: actions/checkout@v4
