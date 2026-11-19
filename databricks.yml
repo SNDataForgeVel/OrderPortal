@@ -3,7 +3,7 @@ bundle:
   uuid: fd636611-0ac1-4ae7-a6ed-88375cd44714
 
 include:
-  - resources/Artfacts/Schema.yml
+  - resources/Artfacts/schema.yml
 
 ##artifacts:
 ##  python_artifact:
