@@ -5,6 +5,9 @@ bundle:
 include:
   - resources/Artfacts/schema.yml
 
+experimental:
+  skip_name_prefix_for_schema: true
+
 ##artifacts:
 ##  python_artifact:
   ##  type: whl
