@@ -14,11 +14,11 @@ experimental:
     ##build: uv build --wheel
 
 variables:
-  catalog:
+  CATALOG:
     description: Unity Catalog name
-  schema:
+  SCHEMA:
     description: The schema to use
-  ordervolumename:
+  ORDERVOLUMENAME:
     description: Volume name
 
 targets:
