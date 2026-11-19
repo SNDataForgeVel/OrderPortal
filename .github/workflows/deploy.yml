@@ -20,5 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: databricks/setup-cli@main
+      - name: Validate bundle
+        run: databricks bundle validate -t dev
       - name: Deploy
         run: databricks bundle deploy -t dev
