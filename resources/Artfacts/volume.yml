@@ -1,0 +1,5 @@
+resources:
+  volume:
+    orders_volume:
+      name: ${var.ordervolumename}
+      schema: ${var.schema}

@@ -15,6 +15,7 @@ jobs:
       DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN  }}
       BUNDLE_VAR_catalog: ${{ vars.CATALOG }}
       BUNDLE_VAR_schema: ${{ vars.SCHEMA }}
+      BUNDLE_VAR_ordervolume: ${{ vars.ORDERVOLUMENAME }}
 
     steps:
       - uses: actions/checkout@v4
