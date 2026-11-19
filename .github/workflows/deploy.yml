@@ -12,7 +12,7 @@ jobs:
       contents: read
     env:
       DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
-      DATABRICKS_CLIENT_ID: ${{ secrets.DATABRICKS_TOKEN  }}
+      DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN  }}
       BUNDLE_VAR_catalog: ${{ vars.CATALOG }}
       BUNDLE_VAR_schema: ${{ vars.SCHEMA }}
 
