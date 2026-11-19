@@ -1,5 +1,5 @@
 resources:
-  volume:
+  volumes:
     orders_volume:
       name: ${var.ordervolumename}
       catalog_name: ${var.catalog}
