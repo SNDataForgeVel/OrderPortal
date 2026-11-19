@@ -2,4 +2,6 @@ resources:
   volume:
     orders_volume:
       name: ${var.ordervolumename}
-      schema: ${var.schema}
+      catalog_name: ${var.catalog}
+      schema_name: ${var.schema}
+      volume_type: MANAGED
