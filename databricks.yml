@@ -1,0 +1,27 @@
+bundle:
+  name: OrdersPortal
+  uuid: fd636611-0ac1-4ae7-a6ed-88375cd44714
+
+include:
+  - resources/*.yml
+
+artifacts:
+  python_artifact:
+    type: whl
+    build: uv build --wheel
+
+variables:
+  catalog:
+    description: Unity Catalog name
+  schema:
+    description: The schema to use
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-8f0147e0-9999.cloud.databricks.com
+    variables:
+      catalog: workspace
+      schema: dev
