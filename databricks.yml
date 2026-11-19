@@ -29,4 +29,5 @@ targets:
       host: https://dbc-8f0147e0-9999.cloud.databricks.com
     variables:
       catalog: workspace
-      schema: dev
+      schema: schema
+      ordervolumename: ordervolumename
