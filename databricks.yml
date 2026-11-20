@@ -23,7 +23,9 @@ variables:
     description: Order Volume name
   CUSTOMERVOLUMENAME:
     description: Customer Volume name
-    
+  WAREHOUSEID:
+    description: Warehouse Id 
+
 targets:
   dev:
     mode: development

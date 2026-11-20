@@ -5,7 +5,7 @@ resources:
       tasks:
         - task_key: create_customers_table
           sql_task:
-            warehouse_id: ${var.warehouse_id}
+            warehouse_id: ${var.WAREHOUSEID}
             file:
               path: ../src/SQL/01_create_managed_table.sql
               source: WORKSPACE

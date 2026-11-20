@@ -18,6 +18,7 @@ jobs:
       BUNDLE_VAR_SCHEMA: ${{ vars.SCHEMA }}
       BUNDLE_VAR_ORDERVOLUMENAME: ${{ vars.ORDERVOLUMENAME }}
       BUNDLE_VAR_CUSTOMERVOLUMENAME: ${{ vars.CUSTOMERVOLUMENAME }}
+      BUNDLE_VAR_WAREHOUSEID: ${{ secrets.WAREHOUSEID }}
 
     steps:
       - uses: actions/checkout@v4
