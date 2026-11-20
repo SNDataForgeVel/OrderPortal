@@ -26,4 +26,6 @@ jobs:
       - name: Validate bundle
         run: databricks bundle validate -t dev
       - name: Deploy
-        run: databricks bundle deploy -t dev
+        run: databricks bundle deploy -t dev#
+      - name: Run Databricks Job
+        run: databricks bundle run create_customers_job
