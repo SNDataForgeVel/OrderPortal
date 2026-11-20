@@ -5,6 +5,7 @@ bundle:
 include:
   - resources/Artfacts/schema.yml
   - resources/Artfacts/volume.yml
+  - resources/Artfacts/SQLScript.yml
 experimental:
   skip_name_prefix_for_schema: true
 

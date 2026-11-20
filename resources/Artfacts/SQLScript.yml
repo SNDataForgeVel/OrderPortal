@@ -1,0 +1,14 @@
+resources:
+  jobs:
+    create_customers_job:
+      name: create_customers_job
+      tasks:
+        - task_key: create_customers_table
+          sql_task:
+            warehouse_id: ${var.warehouse_id}
+            file:
+              path: ../src/SQL/01_create_managed_table.sql
+              source: WORKSPACE
+            parameters:
+              catalog: ${var.CATALOG}
+              schema: ${var.SCHEMA}
