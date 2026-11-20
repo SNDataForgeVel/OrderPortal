@@ -7,7 +7,7 @@ resources:
           sql_task:
             warehouse_id: ${var.WAREHOUSEID}
             file:
-              path: ../src/SQL/01_create_managed_table.sql
+              path: ../../src/SQL/01_create_managed_table.sql
               source: WORKSPACE
             parameters:
               catalog: ${var.CATALOG}
