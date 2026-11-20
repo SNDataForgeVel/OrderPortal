@@ -15,12 +15,14 @@ experimental:
 
 variables:
   CATALOG:
-    description: Unity Catalog name
+    description: Unity Catalog will be used for this project
   SCHEMA:
-    description: The schema to use
+    description: Schema will be used for this project
   ORDERVOLUMENAME:
-    description: Volume name
-
+    description: Order Volume name
+  CUSTOMERVOLUMENAME:
+    description: Customer Volume name
+    
 targets:
   dev:
     mode: development

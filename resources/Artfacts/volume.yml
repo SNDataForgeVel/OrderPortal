@@ -5,3 +5,8 @@ resources:
       catalog_name: ${var.CATALOG}
       schema_name: ${var.SCHEMA}
       volume_type: MANAGED
+    customer_volume:
+      name: ${var.CUSTOMERVOLUMENAME}
+      catalog_name: ${var.CATALOG}
+      schema_name: ${var.SCHEMA}
+      volume_type: MANAGED
