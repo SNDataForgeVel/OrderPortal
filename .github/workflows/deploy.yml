@@ -2,30 +2,25 @@ name: Deploy Databricks
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    environment: dev
-    permissions:
-      id-token: write
-      contents: read
-    env:
-      DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
-      DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN  }}
-      BUNDLE_VAR_CATALOG: ${{ vars.CATALOG }}
-      BUNDLE_VAR_SCHEMA: ${{ vars.SCHEMA }}
-      BUNDLE_VAR_ORDERVOLUMENAME: ${{ vars.ORDERVOLUMENAME }}
-      BUNDLE_VAR_CUSTOMERVOLUMENAME: ${{ vars.CUSTOMERVOLUMENAME }}
-      BUNDLE_VAR_WAREHOUSEID: ${{ secrets.WAREHOUSEID }}
+    branches: [main]
 
-    steps:
-      - uses: actions/checkout@v4
-      - uses: databricks/setup-cli@main
-      - name: Validate bundle
-        run: databricks bundle validate -t dev
-      - name: Deploy
-        run: databricks bundle deploy -t dev
-      - name: Run Databricks Job
-        run: databricks bundle run create_customers_job
+jobs:
+  dev:
+    uses: ./.github/workflows/deploy-template.yml
+    with:
+      env: dev
+    secrets: inherit
+	
+  sit:
+    needs: dev
+    uses: ./.github/workflows/deploy-template.yml
+    with:
+      env: sit
+    secrets: inherit
+
+  uat:
+    needs: sit
+    uses: ./.github/workflows/deploy-template.yml
+    with:
+      env: uat
+    secrets: inherit
