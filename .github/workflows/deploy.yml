@@ -1,4 +1,6 @@
+
 name: Deploy Databricks
+
 on:
   workflow_dispatch:
   push:
@@ -10,7 +12,7 @@ jobs:
     with:
       env: dev
     secrets: inherit
-	
+
   sit:
     needs: dev
     uses: ./.github/workflows/deploy-template.yml
